@@ -1,13 +1,16 @@
 from tkinter import *
 import pandas
+import random
 
 BACKGROUND_COLOR = "#B1DDC6"
 
 data = pandas.read_csv("data/french_words.csv")
-print(data)
+to_learn = data.to_dict(orient="records")
+
 
 def next_card():
-    pass
+    current_card = random.choice(to_learn)
+    print(current_card["French"])
 
 
 window = Tk()
