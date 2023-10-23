@@ -15,8 +15,8 @@ def next_card():
     canvas.itemconfig(card_word, text=current_card["French"])
 
 def flip_card():
-    canvas.itemconfig(card_title, text="English")
-    canvas.itemconfig(card_word, text=current_card["English"])
+    canvas.itemconfig(card_title, text="English", fill="white")
+    canvas.itemconfig(card_word, text=current_card["English"], fill="white")
     canvas.itemconfig(card_background, image=card_back_img)
 
 window = Tk()
